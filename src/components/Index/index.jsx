@@ -1,0 +1,13 @@
+export { default as SectionX } from "../sectionComponents/sectionX";
+export { default as Section3 } from "../sectionComponents/section3";
+export { default as Section5 } from "../sectionComponents/section5";
+export { default as AboutOB } from "../sectionComponents/AboutOB";
+export { default as InfoSection } from "../sectionComponents/infoSection";
+export { default as HeaderNav } from "../Navigation/Header";
+export { default as Footer } from "../Navigation/Footer";
+// export { default as SectionX } from "./SectionX";
+// export { default as SectionX } from "./SectionX";
+// export { default as SectionX } from "./SectionX";
+// export { default as SectionX } from "./SectionX";
+// export { default as SectionX } from "./SectionX";
+// export { default as SectionX } from "./SectionX";
