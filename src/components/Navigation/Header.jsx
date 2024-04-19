@@ -48,7 +48,7 @@ function HeaderNav({ isOver21 }) {
                         fontWeight={"400"}
                         noWrap
                         component={Link}
-                        to="/"
+                        to="/deployed-ObsidianBH/"
                         sx={{
                             color: "inherit",
                             textDecoration: "underline",
