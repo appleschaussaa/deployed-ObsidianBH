@@ -115,7 +115,7 @@ function HeaderNav({ isOver21 }) {
 
                     <Button
                         component={Link}
-                        to="/contact"
+                        to="/deployed-ObsidianBH/contact"
                         sx={{
                             color: "primary.tertiary",
                             textDecoration: "underline",
