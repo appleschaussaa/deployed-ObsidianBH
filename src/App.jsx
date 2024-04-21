@@ -161,7 +161,7 @@ function App() {
                                                 }
                                             /> */}
                                             <Route
-                                                path="/contact"
+                                                path="/deployed-ObsidianBH/contact"
                                                 element={
                                                     <Suspense
                                                         fallback={
