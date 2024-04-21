@@ -65,7 +65,7 @@ function App() {
                             p: 0,
                         }}
                     >
-                        <Grid2 container md={2} sx={{ justifyContent: "end" }}>
+                        {/* <Grid2 container md={2} sx={{ justifyContent: "end" }}> */}
                             {/* <Button
                                 variant="contained"
                                 color="inherit"
@@ -87,11 +87,12 @@ function App() {
                                 
                                 Back to top
                             </Button> */}
-                        </Grid2>
+                        {/* </Grid2> */}
                         <Grid2
                             container
                             rowSpacing={0}
                             rowGap={0}
+                            xs={12}
                             md={12}
                             sx={{
                                 justifyContent: "center",
@@ -133,19 +134,19 @@ function App() {
                                         />
                                     ) : (
                                         <>
-                                            <Route
+                                            {/* <Route
                                                 path="/"
                                                 element={<HomePage />}
-                                            />
+                                            /> */}
                                             <Route
-                                                path="/Obsidian-Beerhall"
+                                                path="/deployed-ObsidianBH"
                                                 element={<HomePage />}
                                             />
                                             {/* <Route
                                                 path="/ontap"
                                                 element={<OnTap />}
                                             /> */}
-                                            <Route
+                                            {/* <Route
                                                 path="/contact"
                                                 element={
                                                     <Suspense
@@ -158,9 +159,9 @@ function App() {
                                                         <ContactObsidian />
                                                     </Suspense>
                                                 }
-                                            />
+                                            /> */}
                                             <Route
-                                                path="/Obsidian-Beerhall/contact"
+                                                path="/deployed-ObsidianBH/contact"
                                                 element={
                                                     <Suspense
                                                         fallback={

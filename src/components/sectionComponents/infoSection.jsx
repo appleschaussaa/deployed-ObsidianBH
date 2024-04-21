@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, Card, CardContent } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 // import MyComponent from "../Reusable/Gmap";
 import {
@@ -10,18 +10,20 @@ import {
 const InfoSection = () => {
     return (
         <Grid2
+            xl={12}
             container
             // columnSpacing={0}
             sx={{
-                alignItems: "center",
+                alignItems: "start",
                 alignContent: "center",
                 justifyContent: "center",
                 height: "100%",
                 borderTopLeftRadius: 8,
                 borderTopRightRadius: 8,
-                color: "primary.tertiary",
-                backgroundColor: "primary.main",
-                textAlign: "center",
+                py: 2
+                // color: "primary.tertiary",
+                // backgroundColor: "primary.main",
+                // textAlign: "center",
                 // pt: 1,
             }}
         >
@@ -35,195 +37,140 @@ const InfoSection = () => {
                     justifyContent: "center",
                 }}
             >
-                <Typography variant="h5" sx={{ textDecoration: "underline" }}>
-                    Hours
-                </Typography>
-                <Typography>Monday - Friday</Typography>
-                <Typography>1pm - 1am</Typography>
-                {/* <Typography variant="h5" sx={{ textDecoration: "underline" }}>
-                    Happy Hours
-                </Typography>
-                <Typography>
-                    1:30 - 3:30 (Lunch specials) <br></br> 5:30 - 7:30 (Dinner
-                    specials)
-                </Typography> */}
+                <Card
+                    sx={{
+                        padding: 2,
+                        pr: 0,
+                        display: "flex",
+                        justifyContent: "flex-end",
+                        alignItems: "flex-start",
+                        backgroundColor: "primary.main",
+                        color: "primary.tertiary",
+                        // flexGrow: 1,
+                    }}
+                >
+                    <CardContent sx={{ textAlign: "center", }}>
+                        <Typography
+                            variant="h5"
+                            sx={{ textDecoration: "underline", textAlign: "center" }}
+                        >
+                            Hours
+                        </Typography>
+                        <Typography>Thursday: 2pm - 8pm</Typography>
+                        <Typography>Friday: 2pm - 10pm</Typography>
+                        <Typography>Saturday: 1pm - 10pm</Typography>
+                        <Typography>Sunday: 1pm - 8pm</Typography>
+                    </CardContent>
+                </Card>
             </Grid2>
             <Grid2
-                md={2}
+                md={1.75}
+                mdOffset={0}
                 sx={{
                     // display: "flex",
                     // flexDirection: "column",
-                    // alignItems: "center",
-                    // justifyContent: "center",
+                    alignItems: "center",
+                    justifyContent: "center",
                 }}
             >
-                <Typography variant="h5" sx={{ textDecoration: "underline" }}>
-                    Directions
-                </Typography>
-                <Typography>1420 Hewitt Ave</Typography>
-                <Typography>Everett, WA 98201</Typography>
+                <Card
+                    sx={{
+                        padding: 2,
+                        px: 0,
+                        display: "flex",
+                        justifyContent: "center",
+                        backgroundColor: "primary.main",
+                        color: "primary.tertiary",
+                    }}
+                >
+                    <CardContent sx={{ textAlign: "center", px: 0, }}>
+                        <Typography
+                            variant="h5"
+                            sx={{ textDecoration: "underline", textAlign: "center"}}
+                        >
+                            Directions
+                        </Typography>
+                        <Typography>1420 Hewitt Ave</Typography>
+                        <Typography>Everett, WA 98201</Typography>
+                        <Typography>(Near Hewitt and Hoyt)</Typography>
+                    </CardContent>
+                </Card>
             </Grid2>
             <Grid2
-                container
                 xs={12}
                 md={2}
                 rowGap={0}
                 sx={{
                     alignItems: "start",
                     textAlign: "left",
-                    color: "primary.tertiary",
                 }}
             >
-                <Grid2
-                    container
-                    xs={12}
-                    md={12}
-                    // component={"a"}
-                    // href="https://www.instagram.com/obsidian_beer_hall/"
-                    sx={{}}
+                <Card
+                    sx={{
+                        padding: 2,
+                        pl: 0,
+                        display: "flex",
+                        justifyContent: "flex-start",
+                        backgroundColor: "primary.main",
+                        color: "primary.tertiary",
+                    }}
                 >
-                    <Grid2
-                        component={Typography}
-                        variant="h6"
-                        sx={{
-                            color: "primary.tertiary",
-                            textDecoration: "underline",
-                        }}
-                    >
-                        Follow us on:
-                    </Grid2>
-                </Grid2>
-                <Grid2
-                    container
-                    xs={12}
-                    md={12}
-                    // component={"a"}
-                    // href="https://www.instagram.com/obsidian_beer_hall/"
-                    sx={{}}
-                >
-                    <Grid2
-                        component={Button}
-                        size="small"
-                        href="https://www.instagram.com/obsidian_beer_hall/"
-                        sx={{ color: "primary.tertiary", fontSize: "medium" }}
-                    >
-                        INSTAGRAM
-                    </Grid2>
-                    <Instagram />
-                </Grid2>
-                <Grid2
-                    xs={12}
-                    md={12}
-                    // component={"a"}
-                    // href="https://www.instagram.com/obsidian_beer_hall/"
-                    sx={{}}
-                >
-                    {/* <Yelp /> */}
-                    <Grid2
-                        component={Button}
-                        size="small"
-                        sx={{ color: "primary.tertiary", fontSize: "medium" }}
-                    >
-                        Yelp (no icon)
-                    </Grid2>
-                </Grid2>
+                    <CardContent sx={{ }}>
+                        <Grid2
+                            component={Typography}
+                            variant="h5"
+                            sx={{
+                                color: "primary.tertiary",
+                                textDecoration: "underline",
+                            }}
+                        >
+                            Follow us on:
+                        </Grid2>
+                        <Grid2
+                            container
+                            xs={12}
+                            md={12}
+                            // component={"a"}
+                            // href="https://www.instagram.com/obsidian_beer_hall/"
+                            sx={{}}
+                        >
+                            <Grid2
+                                component={Button}
+                                size="small"
+                                href="https://www.instagram.com/obsidian_beer_hall/"
+                                sx={{
+                                    color: "primary.tertiary",
+                                    fontSize: "medium",
+                                }}
+                            >
+                                INSTAGRAM
+                            </Grid2>
+                            <Instagram />
+                        </Grid2>
+                        <Grid2
+                            xs={12}
+                            md={12}
+                            // component={"a"}
+                            // href="https://www.instagram.com/obsidian_beer_hall/"
+                            sx={{}}
+                        >
+                            {/* <Yelp /> */}
+                        </Grid2>
+                        <Grid2
+                            component={Button}
+                            size="small"
+                            sx={{
+                                color: "primary.tertiary",
+                                fontSize: "medium",
+                            }}
+                        >
+                            Yelp/Other social
+                        </Grid2>
+                    </CardContent>
+                </Card>
             </Grid2>
         </Grid2>
     );
 };
 
 export default InfoSection;
-
-{
-    /* <Grid2
-                container
-                md={3}
-                sx={{ textAlign: "center", outline: "hidden" }}
-            >
-                <Grid2 sx={{}}>
-                    <Typography
-                        variant="h4"
-                        sx={{
-                            textDecoration: "underline",
-                            textAlign: "center",
-                        }}
-                    >
-                        Bird Eye
-                    </Typography>
-                    <MyComponent />
-                    <Typography>View on Google Maps, needs API key</Typography>
-                </Grid2>
-            </Grid2> */
-}
-
-{
-    /* <Grid2
-                    container
-                    xs={12}
-                    md={12}
-                    gap={1}
-                    // component={"a"}
-                    // href="https://www.instagram.com/obsidian_beer_hall/"
-                >
-                    <Grid2
-                        component={Button}
-                        size="small"
-                        href="https://www.instagram.com/obsidian_beer_hall/"
-                        sx={{ color: "primary.tertiary", fontSize: "medium" }}
-                    >
-                        Twitter/X
-                    </Grid2>
-                    <Grid2
-                        component={Button}
-                        size="small"
-                        href="https://www.instagram.com/obsidian_beer_hall/"
-                        sx={{ color: "primary.tertiary" }}
-                    >
-                        <Twitter />
-                    </Grid2>
-
-                    <Grid2
-                        component={Button}
-                        size="small"
-                        href="https://www.instagram.com/obsidian_beer_hall/"
-                        sx={{ color: "primary.tertiary" }}
-                    >
-                        <X />
-                    </Grid2>
-                </Grid2> */
-}
-{
-    /* <Grid2
-                    container
-                    xs={12}
-                    md={12}
-                    gap={1}
-                    // component={"a"}
-                    // href="https://www.instagram.com/obsidian_beer_hall/"
-                >
-                    <Grid2
-                        component={Button}
-                        size="small"
-                        href="https://www.instagram.com/obsidian_beer_hall/"
-                        sx={{ color: "primary.tertiary", fontSize: "medium" }}
-                    >
-                        Facebook
-                    </Grid2>
-                    <Grid2
-                        component={Button}
-                        size="small"
-                        href="https://www.instagram.com/obsidian_beer_hall/"
-                        sx={{ color: "primary.tertiary" }}
-                    >
-                        <Facebook />
-                    </Grid2>
-                    <Grid2
-                        component={Button}
-                        size="small"
-                        href="https://www.instagram.com/obsidian_beer_hall/"
-                        sx={{ color: "primary.tertiary" }}
-                    >
-                        <FacebookRounded />
-                    </Grid2>
-                </Grid2> */
-}

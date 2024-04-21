@@ -17,7 +17,7 @@ const SectionX = () => {
                 backgroundImage: `url(${ObsidianSign})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
+                backgroundPosition: { xs: "45% top", lg: "center center" },
                 backgroundAttachment: "fixed",
             }}
         ></Grid2>

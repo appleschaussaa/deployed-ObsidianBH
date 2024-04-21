@@ -20,10 +20,14 @@ function HeaderNav({ isOver21 }) {
 
     return (
         <Grid2
+        xs={12}
+        md={12}
+        lg={12}
             container
             sx={{
                 alignItes: "center",
                 height: "8dvh",
+                width: "100%",
                 justmifyContent: "center",
                 backgroundColor: "primary.main",
                 color: "primary.secondary",
@@ -31,6 +35,7 @@ function HeaderNav({ isOver21 }) {
             }}
         >
             <Grid2
+                xs={9.5}
                 md={6}
                 mdOffset={0.25}
                 sx={{
@@ -74,7 +79,7 @@ function HeaderNav({ isOver21 }) {
                 md={4}
                 mdOffset={0.25}
                 sx={{
-                    display: "flex",
+                    display: { xs: "none", md: "flex" },
                     justifyContent: "end",
                 }}
             >
@@ -112,9 +117,7 @@ function HeaderNav({ isOver21 }) {
                         component={Link}
                         to="/contact"
                         sx={{
-                            my: 2,
                             color: "primary.tertiary",
-                            // display: "none",
                             textDecoration: "underline",
                             "&:hover": {
                                 textDecoration: "overline",
@@ -140,7 +143,6 @@ function HeaderNav({ isOver21 }) {
                     </Button> */}
                 </Grid2>
             </Grid2>
-            <Grid2 md={0}></Grid2>
         </Grid2>
     );
 }

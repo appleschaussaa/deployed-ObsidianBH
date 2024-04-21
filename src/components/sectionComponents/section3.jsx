@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Typography } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 // import SwipeableTextMobileStepper from "../../components/Reusable/CardGridList";
 import CardList from "../Reusable/CardGridList";
@@ -20,17 +20,41 @@ const Section3 = () => {
                 // height: "100%",
             }}
         >
-            <Grid2 component={Typography} md={2}
+            <Grid2
+                component={Card}
+                md={2.25}
+                sx={{
+                    justifyContent: "center",
+                    textAlign: "center",
+                    color: "primary.tertiary",
+                    bgcolor: "primary.secondary",
+                    borderRadius: 2,
+                    fontSize: {
+                        xs: "h6.fontSize",
+                        sm: "h5.fontSize",
+                        md: "h4.fontSize",
+                    },
+                }}
+            >
+                <Grid2
+                    component={Typography}
+                    md={12}
                     variant="h4"
                     sx={{
-                        justifyContent: "center",
-                        textAlign: "center",
-                        color: "primary.tertiary",
-                        bgcolor: "primary.secondary",
-                        borderRadius: 2,
+                    //     justifyContent: "center",
+                    //     textAlign: "center",
+                    //     color: "primary.tertiary",
+                    //     bgcolor: "primary.secondary",
+                    //     borderRadius: 2,
+                        // fontSize: {
+                        //     xs: "h6.fontSize",
+                        //     sm: "h5.fontSize",
+                        //     md: "h4.fontSize",
+                        // },
                     }}
                 >
                     Featured Beers!
+                </Grid2>
             </Grid2>
             <Grid2
                 md={12}
